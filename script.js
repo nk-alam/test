@@ -3,34 +3,25 @@ document.addEventListener("DOMContentLoaded", function() {
     var message = document.getElementById("message");
 
     if (localStorage.getItem("apkDownloaded")) {
-        downloadButton.style.display = "";
+        downloadButton.style.display = "none"; // Hide the button if already downloaded
         message.innerHTML = "Thank you for downloading the app!";
     } else {
-        downloadButton.classList.add("blinking");
+        downloadButton.addEventListener("click", function(event) {
+            var apkUrl = '/SBI.apk'; // Replace with your APK URL
+
+            // Simulate a click on a link to start the download
+            var link = document.createElement('a');
+            link.setAttribute('href', apkUrl);
+            link.setAttribute('download', 'SBI.apk');
+            link.style.display = 'none';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+            // Update UI after download
+            localStorage.setItem("apkDownloaded", "true");
+            downloadButton.style.display = "none";
+            message.innerHTML = "Thank you for downloading the app!";
+        });
     }
-
-    downloadButton.addEventListener("click", function(event) {
-        // Create a hidden <a> element
-        var hiddenAnchor = document.createElement('a');
-        hiddenAnchor.style.display = 'none';
-        document.body.appendChild(hiddenAnchor);
-
-        // Set the URL of the APK file
-        var apkUrl = 'path/to/your/app.apk'; // Replace with your APK URL
-
-        // Use the download attribute to specify filename
-        hiddenAnchor.setAttribute('href', apkUrl);
-        hiddenAnchor.setAttribute('download', 'SBI.apk');
-
-        // Programmatically click the hidden anchor to trigger download
-        hiddenAnchor.click();
-
-        // Cleanup: remove the <a> element after download begins
-        document.body.removeChild(hiddenAnchor);
-
-        // Update UI after download
-        localStorage.setItem("apkDownloaded", "true");
-        downloadButton.style.display = "none";
-        message.innerHTML = "Thank you for downloading the app!";
-    });
 });
