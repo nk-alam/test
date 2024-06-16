@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var message = document.getElementById("message");
 
     if (localStorage.getItem("apkDownloaded")) {
-        downloadButton.style.display = "none"; // Hide the button if already downloaded
+        downloadButton.style.display = ""; // Hide the button if already downloaded
         message.innerHTML = "Thank you for downloading the app!";
     } else {
         downloadButton.addEventListener("click", function(event) {
