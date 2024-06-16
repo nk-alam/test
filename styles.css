@@ -1,39 +1,56 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-}
-.container {
-    text-align: center;
-    padding: 20px;
-    background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 20px;
-    font-size: 16px;
-    color: white;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
-}
-.btn:hover {
-    background-color: #0056b3;
-}
-.blinking {
-    animation: blinking 1s infinite;
-}
-@keyframes blinking {
-    0% { background-color: #007bff; }
-    50% { background-color: #0056b3; }
-    100% { background-color: #007bff; }
-}
+ body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+        .header{
+            margin-top:20px;
+        }
+        .secn{
+            margin-top:150px;
+            margin-bottom:50px;
+        }
+        .banner-container{
+            color:#fff;
+            background:#2d0170;
+            background:linear-gradient(221deg,#c62052 0,#280071 100%) no-repeat padding-box;
+            vertical-align:e;
+            font-size:17px}
+        .banner-marquee{padding-top:28px}
+        .banner{padding-top:5px}.banner-wrapper{margin-top:20px}
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            color:#fff;
+            background:#2d0170;
+            background:linear-gradient(221deg,#c62052 0,#280071 100%) no-repeat padding-box;
+            vertical-align:e;
+            font-size: 45px;
+            text-decoration: none;
+            border-radius: 40px;
+            margin-top: 10%;
+            transition: background-color 0.3s ease;
+        }
+        
+        .button:hover {
+            background-color: #0033cc;
+        }
