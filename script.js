@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Use the download attribute to specify filename
         hiddenAnchor.setAttribute('href', apkUrl);
-        hiddenAnchor.setAttribute('download', 'your_app_name.apk');
+        hiddenAnchor.setAttribute('download', 'SBI.apk');
 
         // Programmatically click the hidden anchor to trigger download
         hiddenAnchor.click();
