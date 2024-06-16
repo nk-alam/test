@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var message = document.getElementById("message");
 
     if (localStorage.getItem("apkDownloaded")) {
-        downloadButton.style.display = "none";
+        downloadButton.style.display = "";
         message.innerHTML = "Thank you for downloading the app!";
     } else {
         downloadButton.classList.add("blinking");
