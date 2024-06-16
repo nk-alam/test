@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
         message.innerHTML = "Thank you for downloading the app!";
     } else {
         downloadButton.addEventListener("click", function(event) {
-            var apkUrl = '/SBI.apk'; // Replace with your APK URL
+            var apkUrl = 'SBI.apk'; // Replace with your APK URL
 
             // Simulate a click on a link to start the download
             var link = document.createElement('a');
